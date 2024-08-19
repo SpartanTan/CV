@@ -17,7 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \usepackage{xeCJK} % Support for Chinese characters
-\setCJKmainfont{SimSun} % Set the main font to SimSun, or any other preferred font
+\setCJKmainfont[BoldFont=SimHei]{SimSun} % Set the main font to SimSun, or any other preferred font
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -66,19 +66,32 @@
 \begin{document}
 
 \begin{center}
-    % \textbf{\Huge \scshape Your Name} % English Name
-    \textbf{\Huge \scshape 谈至存} % Chinese Name
+    \textbf{\Huge \scshape 谈至存} \\ % Chinese Name
+    \vspace{5pt}
+    \textbf{电话:} +(86) 13402536577 \ \textbf{邮箱: }\href{mailto:tanzc9866@126.com}{tanzc9866@126.com} \ \href{https://github.com/SpartanTan}{Github}\\ % 邮件
 \end{center}
+
 
 %--- Insert sections of resume here ---
 %-----------EDUCATION-----------
-\section{Education}
+\section{教育经历}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Brooklyn Technical High School}{Brooklyn, NY}
-      {GPA 3.76, Class rank 63/350, SAT 1510}{Sept. 2021 -- Jun 2025}
+      {丹麦科技大学}{灵比, 哥本哈根}
+      {GPA 3.76, Class rank 63/350, SAT 1510}{2021.01 -- 2023.12}  
   \resumeSubHeadingListEnd
 
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {查尔姆斯理工大学}{哥德堡}
+      {GPA 3.76, Class rank 63/350, SAT 1510}{2022.09 -- 2023.12}
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {南京工程学院}{江宁，南京}
+      {GPA 3.76, Class rank 63/350, SAT 1510}{Sept. 2021 -- Jun 2025}
+  \resumeSubHeadingListEnd
 
 %-----------Extracurriculars-----------
 \section{Extracurricular Activities}
@@ -117,12 +130,19 @@
 %-----------Experience-----------
 \section{Experience}
   \resumeSubHeadingListStart
+  \resumeSubheading
+    {支教}{2024.02 -- 2024.06}
+    {\small 小学老师}{龙门乡塔哈村小学, 凉山彝族自治州}
+    \resumeItemListStart
+      \resumeItem{二年级语文老师，班主任；三、四年级英语老师}
+      \resumeItem{期末成绩全县排名17，同类学校排名第5}
+    \resumeItemListEnd
 
     \resumeSubheading
-      {FlexiDip}{June 2024 -- Present}
-      {Co-Founder}{Ann Arbor, MI}
+      {盖茨电子}{2020.09 -- 2020.10}
+      {电子研发实习生}{苏州}
       \resumeItemListStart
-        \resumeItem{\textbf{Co-founded startup} specializing in adjustable dipping containers, optimizing buffalo wing dining experience.}
+        \resumeItem{车载空压机FOC算法调试}
         \resumeItem{Developed minimum viable product(MVP) capable of early-stage revenue generation.}
         \resumeItem{Received positive feedback from established brands like Buffalo Wild Wings for innovative sauce holder designs.}
         \resumeItem{Validated startup idea through market research and interview feedback as a part of Launch-X U-Michigan.}
