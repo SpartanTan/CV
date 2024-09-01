@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \usepackage{xeCJK} % Support for Chinese characters
+\setmainfont{Arial}  % 将主字体设置为 Arial
 \setCJKmainfont[BoldFont=SimHei]{SimSun} % Set the main font to SimSun, or any other preferred font
 
 \pagestyle{fancy}
@@ -58,14 +59,15 @@
 }
 
 % 新命令，用于需要额外行的条目
-\newcommand{\resumeSubheadingExtended}[5]{
+\newcommand{\resumeSubheadingExtended}[5]{  % 使用五个参数
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \multicolumn{2}{l}{\small#5}  % 添加的额外信息行
-    \end{tabular*}\vspace{-7pt}
+    \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}p{0.8\textwidth}r}
+      \textbf{#1} & #2 \\ % 第一行：名称和地点
+      \multicolumn{2}{l}{\textit{\small#3}} \\ % 第二行：专业名称
+      \textit{\small#4} & \textit{\small#5} % 第三行：GPA, 排名信息及日期
+    \end{tabular*}\vspace{-5pt}
 }
+
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -89,19 +91,20 @@
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
       {丹麦科技大学 - 硕士}{哥本哈根，丹麦}
-      {机械电子工程}
-      {GPA 3.76, Class rank 63/350, SAT 1510}{2021.01 -- 2023.12}  
+      {Autonomous Systems 自治系统}
+      {GPA 8.86/12}{2021.01 -- 2023.12}  
   \resumeSubHeadingListEnd
 
   \resumeSubHeadingListStart
     \resumeSubheading
       {查尔姆斯理工大学（交换）- 硕士}{哥德堡，瑞典}
-      {GPA 3.76, Class rank 63/350, SAT 1510}{2022.09 -- 2023.12}
+      {System, Control and Mechatronics 系统控制，机电一体化}{2022.09 -- 2023.12}
   \resumeSubHeadingListEnd
 
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeSubheadingExtended
       {南京工程学院 - 本科}{江宁，南京}
+      {机械电子工程}
       {GPA 3.47, 专业排名 10/162, SAT 1510}{2016.09 -- 2020.06}
   \resumeSubHeadingListEnd
 
