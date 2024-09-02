@@ -67,7 +67,7 @@
       \textbf{#1} & \textbf{#2} \\  % 第一行：学校名称 & 地点
       \textit{#3} & \textit{#4} \\  % 第二行：专业名称 & 时间
       #5 &  % 第三行：GPA，仅左侧
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-10pt}
   }
 }
 
@@ -98,13 +98,15 @@
       {GPA 8.86/12}
   \resumeSubHeadingListEnd
 
-  \vspace{-3mm} % 调整这里的值以减少空间
+  \vspace{-1mm} % 调整这里的值以减少空间
 
   \resumeSubHeadingListStart
     \resumeSubheading
       {Chalmers University of Technology 查尔姆斯理工大学（交换）- 硕士}{哥德堡，瑞典}
       {System, Control and Mechatronics 系统控制，机电一体化}{2022.09 -- 2023.12}
   \resumeSubHeadingListEnd
+  
+  \vspace{-0.5mm} % 调整这里的值以减少空间
 
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
@@ -118,40 +120,49 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Chalmers Formula Student/Chalmers方程式赛车队}{查尔姆斯理工大学}
-      {自动驾驶团队软件工程师}{2022.09 -- 2023.08}
+      {\textbf{强化学习机器人导航控制}}{丹麦科技大学}
+      {独立开发者}{2023.07 -- 2023.12}
       \resumeItemListStart
-        \resumeItem{根据单位经纬度在地面投影的长度，实现从GPS获取的地理坐标（经纬度）转换为地图坐标的方法。该方法被用以验证SLAM地图的准确性。}
-        \resumeItem{使用C++开发Gazebo插件，实现以驱动轴扭矩为输入的四轮车辆动力学仿真}
-        \resumeItem{参与开发基于PyQt的GUI工具，便于启动Gazebo、Rviz以及自动驾驶系统，可根据实际车辆调整模型参数}
-        \resumeItem{帮助团队在2023 Formula Student德国站无人杯获得冠军，东欧站无人杯获得第七名}
-      \resumeItemListEnd
+        \resumeItem{基于Gymnasium环境开发了一个搭载激光雷达两轮驱动小车的训练环境}
+        \resumeItem{由于环境限制，从零实现了激光雷达模块，尝试采用多种方式如numba和向量化加速计算}
+        \resumeItem{为避免过拟合，实现了可随机生成的训练环境，包含可调长度的规划路径、可动障碍物、及走廊墙壁}
+        \resumeItem{开发了一个用于调试训练参数、环境参数和图形化显示仿真环境的GUI工具，便于显示数据和验证算法}
+        \resumeItem{实现了基于PPO的导航控制算法，使得小车能够在未知环境中避障并到达目标，综合成功率在60\%左右}
+    \resumeItemListEnd
       
     \resumeSubheading
-      {\textbf{无人自主系统课程}}{丹麦科技大学}
+      {\textbf{Unmanned autonomous systems 无人自主系统}}{丹麦科技大学}
       {项目开发者}{2022.06 -- 2022.06}
       \resumeItemListStart
-        \resumeItem{实现基于Matlab/Simulink的无人机控制系统，使得小型四轴无人机实现悬停，定点平移等功能}
+        \resumeItem{实现基于Matlab/Simulink的无人机控制系统，使得小型四轴无人机实现悬停、平移、定点飞行等功能}
         \resumeItem{实现了3D环境下应用A*进行路径规划，成功控制无人机穿越3D迷宫}
         \resumeItem{应用多项式优化工具实现轨迹规划，成功控制无人机自主起飞、穿越四个随机设置的圆环并降落}
       \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
 
 %-----------Experience-----------
 \section{经历}
   \resumeSubHeadingListStart
-  \resumeSubheading
-    {凉善公益}{龙门乡塔哈村小学, 凉山彝族自治州}
-    {\small 小学支教老师}{2024.02 -- 2024.06}
-    \resumeItemListStart
-      \resumeItem{二年级语文老师，班主任；三、四年级英语老师}
-      \resumeItem{期末成绩全县排名17，同类学校排名第5}
+    \resumeSubheading
+      {Chalmers Formula Student/Chalmers方程式赛车队}{查尔姆斯理工大学}
+      {自动驾驶团队软件工程师}{2022.09 -- 2023.08}
+      \resumeItemListStart
+        \resumeItem{根据单位经纬度在地面投影的长度，实现从GPS获取的地理坐标（经纬度）转换为地图坐标的方法。该方法被用以验证SLAM地图的准确性。}
+        \resumeItem{开发Gazebo插件，实现以扭矩为输入、考虑重量转移的四轮车辆动力学仿真，便于测试SLAM和控制算法}
+        \resumeItem{参与开发基于PyQt的GUI工具，便于启动Gazebo、Rviz以及自动驾驶系统，可根据实际车辆调整模型参数}
+        \resumeItem{帮助团队在2023 Formula Student德国站无人杯获得冠军，东欧站无人杯获得第七名}
     \resumeItemListEnd
+  %   \resumeSubheading
+    %   {凉善公益}{龙门乡塔哈村小学, 凉山彝族自治州}
+    %   {\small 小学支教老师}{2024.02 -- 2024.06}
+    %   \resumeItemListStart
+    %     \resumeItem{二年级语文老师，班主任；三、四年级英语老师}
+    %     \resumeItem{期末成绩全县排名17，同类学校排名第5}
+  %   \resumeItemListEnd
 
     \resumeSubheading
-      {苏州盖茨电子有限公司}{苏州，江苏}
+      {苏州盖茨电子科技有限公司}{苏州，江苏}
       {电子研发实习生}{2020.09 -- 2020.10}
       \resumeItemListStart
         \resumeItem{参与调试基于S32K144的车载空压机FOC算法}
@@ -162,8 +173,8 @@
       {单片机开发、负责人}{2017.07 -- 2018.07}
       \resumeItemListStart
         \resumeItem{开发基于STM32的四轮循迹小车程序，实现摄像头/激光测距循迹，机械臂控制}
-        \resumeItem{带领团队蝉联2017年省大学生机器人大赛和2018年中国工程机器人大赛冠军。}
-        \resumeItem{申请2项实用新型专利，完成1项挑战杯（管道机器人）结题。}
+        \resumeItem{带领团队蝉联2017年省大学生机器人大赛和2018年中国工程机器人大赛冠军}
+        \resumeItem{申请2项实用新型专利，完成1项挑战杯（管道机器人）结题}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -172,17 +183,22 @@
 \section{奖项}
     \resumeSubHeadingListStart
       \resumeSubheading
-      {2019钛马大赛 冠军 -（ROS单线激光雷达避障越野）}{2019.06}
+      {2019钛马大赛 冠军 -（室内环境下搭载单线激光雷达阿克曼转向小车避障越野）}{2019.06}
       {}{}
       \vspace{-4mm}
 
       \resumeSubheading
-      {2018中国工程机器人大赛 冠军 -（工程越野项目竞技赛：摄像头循迹，PID控制，机械臂抓取）}{2018.04}
+      {2018中国工程机器人大赛 冠军 -（工程越野项目竞技赛：摄像头循迹、PID控制、色彩识别、机械臂抓取）}{2018.04}
       {}{}
       \vspace{-4mm}
 
       \resumeSubheading
-      {第八届江苏省机器人大赛 冠军 -（机器人越野项目：摄像头循迹，PID控制）}{2017.11}
+      {第八届江苏省机器人大赛 冠军 -（机器人越野项目：摄像头循迹、PID控制）}{2017.11}
+      {}{}
+      \vspace{-4mm}
+
+      \resumeSubheading
+      {2017中国机器人大赛 一等奖 -（机器人越野项目：摄像头循迹、PID控制）}{2017.08}
       {}{}
       \vspace{-4mm}
       % \resumeSubheading
@@ -209,11 +225,11 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \vspace{1mm}
-     \textbf{编程相关}{: Python、C/C++、Matlab/Simulink、Linux, ROS,} \\
+     \textbf{编程相关}{: Python、C/C++、Matlab/Simulink、Linux、 ROS、Docker、git} \\
      \vspace{1mm}
-     \textbf{专业相关}{: PID、MPC、强化学习、车辆动力学} \\
+     \textbf{专业相关}{: 线性控制系统搭建和分析、PID、MPC等控制方法、强化学习和控制、无人机/车辆/水下机器人动力学及控制} \\
      \vspace{1mm}
-     \textbf{语言相关}{：英语雅思6.5（口语7.0），具有较强沟通能力和共情能力}
+     \textbf{语言相关}{：英语雅思6.5（口语7.0），曾深度参与外国工程团队，具有较强沟通能力}
 
     }}
  \end{itemize}
