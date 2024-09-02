@@ -17,7 +17,8 @@
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \usepackage{xeCJK} % Support for Chinese characters
-\setCJKmainfont{SimSun} % Set the main font to SimSun, or any other preferred font
+\setmainfont{Arial}  % 将主字体设置为 Arial
+\setCJKmainfont[BoldFont=Microsoft YaHei]{SimSun} % Set the main font to SimSun, or any other preferred font
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -40,7 +41,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Custom commands
@@ -49,13 +50,28 @@
     {#1 \vspace{-2pt}}
   }
 }
+
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-2pt}\item\small{
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} & \textbf{#2} \\
+      \textit{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-7pt}
+  }
 }
+
+% 新命令，用于需要额外行的条目
+\newcommand{\resumeSubheadingExtended}[5]{  
+  \item\small{
+    \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}lr}
+      \textbf{#1} & \textbf{#2} \\  % 第一行：学校名称 & 地点
+      \textit{#3} & \textit{#4} \\  % 第二行：专业名称 & 时间
+      #5 &  % 第三行：GPA，仅左侧
+    \end{tabular*}\vspace{-10pt}
+  }
+}
+
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -66,125 +82,163 @@
 \begin{document}
 
 \begin{center}
-    % \textbf{\Huge \scshape Your Name} % English Name
-    \textbf{\Huge \scshape Zhicun Tan} % Chinese Name
+    \textbf{\Huge \scshape Zhicun Tan (至存 谈)} \\ % Chinese Name
+    \vspace{5pt}
+    \textbf{Phone:} +(86) 13402536577 \ \textbf{e-mail: }\href{mailto:tanzc9866@126.com}{tanzc9866@126.com} \ \href{https://github.com/SpartanTan}{Github}\\ % 邮件
 \end{center}
+
 
 %--- Insert sections of resume here ---
 %-----------EDUCATION-----------
-\section{Education}
+\section{教育经历}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Brooklyn Technical High School}{Brooklyn, NY}
-      {GPA 3.76, Class rank 63/350, SAT 1510}{Sept. 2021 -- Jun 2025}
+    \resumeSubheadingExtended
+      {Technical University of Denmark 丹麦科技大学 - 硕士}{哥本哈根，丹麦}
+      {Autonomous Systems 自治系统}{2021.01 -- 2023.12}  
+      {GPA 8.86/12}
   \resumeSubHeadingListEnd
 
+  \vspace{-1mm} % 调整这里的值以减少空间
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chalmers University of Technology 查尔姆斯理工大学（交换）- 硕士}{哥德堡，瑞典}
+      {System, Control and Mechatronics 系统控制，机电一体化}{2022.09 -- 2023.12}
+  \resumeSubHeadingListEnd
+  
+  \vspace{-0.5mm} % 调整这里的值以减少空间
+
+  \resumeSubHeadingListStart
+    \resumeSubheadingExtended
+      {南京工程学院 - 本科}{南京，中国}
+      {机械电子工程}{2016.09 -- 2020.06}
+      {GPA 3.47, 专业排名 10/162}
+  \resumeSubHeadingListEnd
 
 %-----------Extracurriculars-----------
-\section{Extracurricular Activities}
+\section{项目}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Student Government}{Sept. 2023 -- Jun. 2024}
-      {Treasurer}{Brooklyn, NY}
+      {\textbf{强化学习机器人导航控制}}{丹麦科技大学}
+      {独立开发者}{2023.07 -- 2023.12}
       \resumeItemListStart
-        \resumeItem{Developed budget proposals, collaborating with the student government team to plan major school events.}
-        \resumeItem{Organized and led fundraising events, \textbf{raising over \$5,000} for school activities and projects.}
-        \resumeItem{Managed the student government budget, ensuring accurate tracking and allocation of funds.}
-    
-      \resumeItemListEnd
+        \resumeItem{基于Gymnasium环境开发了一个搭载激光雷达两轮驱动小车的训练环境}
+        \resumeItem{由于环境限制，从零实现了激光雷达模块，尝试采用多种方式如numba和向量化加速计算}
+        \resumeItem{为避免过拟合，实现了可随机生成的训练环境，包含可调长度的规划路径、可动障碍物、及走廊墙壁}
+        \resumeItem{开发了一个用于调试训练参数、环境参数和图形化显示仿真环境的GUI工具，便于显示数据和验证算法}
+        \resumeItem{实现了基于PPO的导航控制算法，使得小车能够在未知环境中避障并到达目标，综合成功率在60\%左右}
+    \resumeItemListEnd
       
     \resumeSubheading
-      {Math Team}{Sept. 2022 -- Present}
-      {Team Captain}{Brooklyn, NY}
+      {\textbf{Unmanned autonomous systems 无人自主系统}}{丹麦科技大学}
+      {项目开发者}{2022.06 -- 2022.06}
       \resumeItemListStart
-        \resumeItem{Competed in regional, state, and national-level math competitions\textbf{(NYCIML, NYCMTS).}}
-        \resumeItem{Facilitated weekly study sessions to discuss high-level \textbf{Probability Theory, Geometry \& Algebra.}}
-        \resumeItem{Led a 26-member math team as captain, overseeing strategy development and competition preparation.}
+        \resumeItem{实现基于Matlab/Simulink的无人机控制系统，使得小型四轴无人机实现悬停、平移、定点飞行等功能}
+        \resumeItem{实现了3D环境下应用A*进行路径规划，成功控制无人机穿越3D迷宫}
+        \resumeItem{应用多项式优化工具实现轨迹规划，成功控制无人机自主起飞、穿越四个随机设置的圆环并降落}
       \resumeItemListEnd
-    
-    \resumeSubheading
-      {Varsity Swim Team}{Sep. 2021 -- June 2024}
-      {Team Captain}{Brooklyn, NY}
-      \resumeItemListStart
-        \resumeItem{Led the varsity swim team to its \textbf{inaugural section championship} through leadership and strategic planning.}
-        \resumeItem{Mentored junior team members, providing guidance on proper techniques, race preparation, and sportsmanship.}
-    \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
 
 %-----------Experience-----------
-\section{Experience}
+\section{经历}
   \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.chalmersformulastudent.se/cfs-2023-car-margareta}{Chalmers Formula Student/Chalmers方程式赛车队 🔗}}{查尔姆斯理工大学}
+      {自动驾驶团队软件工程师}{2022.09 -- 2023.08}
+      \resumeItemListStart
+        \resumeItem{根据单位经纬度在地面投影的长度，实现从GPS获取的地理坐标（经纬度）转换为地图坐标的方法。该方法被用以验证SLAM地图的准确性。}
+        \resumeItem{开发Gazebo插件，实现以扭矩为输入、考虑重量转移的四轮车辆动力学仿真，便于测试SLAM和控制算法}
+        \resumeItem{参与开发基于PyQt的GUI工具，便于启动Gazebo、Rviz以及自动驾驶系统，可根据实际车辆调整模型参数}
+        \resumeItem{帮助团队在2023 Formula Student德国站无人杯获得冠军，东欧站无人杯获得第七名}
+    \resumeItemListEnd
+  %   \resumeSubheading
+    %   {凉善公益}{龙门乡塔哈村小学, 凉山彝族自治州}
+    %   {\small 小学支教老师}{2024.02 -- 2024.06}
+    %   \resumeItemListStart
+    %     \resumeItem{二年级语文老师，班主任；三、四年级英语老师}
+    %     \resumeItem{期末成绩全县排名17，同类学校排名第5}
+  %   \resumeItemListEnd
 
     \resumeSubheading
-      {FlexiDip}{June 2024 -- Present}
-      {Co-Founder}{Ann Arbor, MI}
+      {苏州盖茨电子科技有限公司}{苏州，江苏}
+      {电子研发实习生}{2020.09 -- 2020.10}
       \resumeItemListStart
-        \resumeItem{\textbf{Co-founded startup} specializing in adjustable dipping containers, optimizing buffalo wing dining experience.}
-        \resumeItem{Developed minimum viable product(MVP) capable of early-stage revenue generation.}
-        \resumeItem{Received positive feedback from established brands like Buffalo Wild Wings for innovative sauce holder designs.}
-        \resumeItem{Validated startup idea through market research and interview feedback as a part of Launch-X U-Michigan.}
+        \resumeItem{参与调试基于S32K144的车载空压机FOC算法}
       \resumeItemListEnd
       
     \resumeSubheading
-      {Private Math Tutor}{Sept. 2021 -- Present}
-      {Team Captain}{Brooklyn, NY}
+      {越野机器人实验室}{南京工程学院，南京}
+      {单片机开发、负责人}{2017.07 -- 2018.07}
       \resumeItemListStart
-        \resumeItem{Provided personalized tutoring sessions in algebra, calculus, and geometry to elementary \& middle-school students}
-        \resumeItem{Developed lesson plans for diverse learning styles, leading to improvements by \textbf{upwards of 1.5 letter grades}.}
+        \resumeItem{开发基于STM32的四轮循迹小车程序，实现摄像头/激光测距循迹，机械臂控制}
+        \resumeItem{带领团队蝉联2017年省大学生机器人大赛和2018年中国工程机器人大赛冠军}
+        \resumeItem{申请2项实用新型专利，完成1项挑战杯（管道机器人）结题}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
-\section{Awards}
+\section{奖项}
     \resumeSubHeadingListStart
       \resumeSubheading
-      {Speedo Scholastic All-American}{Aug. 2023 -- Present}
+      {2019钛马大赛 冠军 -（室内环境下搭载单线激光雷达阿克曼转向小车避障越野）}{2019.06}
       {}{}
-      \resumeItemListStart
       \vspace{-4mm}
-        \resumeItem{National award given to student-athletes who achieve a \textbf{national time standard }while maintaining a 3.5+ GPA.}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-      {National Junior Honor Society}{June 2023 -- Present}
+
+      \resumeSubheading
+      {2018中国工程机器人大赛 冠军 -（工程越野项目竞技赛：摄像头循迹、PID控制、色彩识别、机械臂抓取）}{2018.04}
       {}{}
-      \resumeItemListStart
       \vspace{-4mm}
-        \resumeItem{Award presented to students with outstanding achievements in academics, leadership, and community service.}
-      \resumeItemListEnd
+
+      \resumeSubheading
+      {第八届江苏省机器人大赛 冠军 -（机器人越野项目：摄像头循迹、PID控制）}{2017.11}
+      {}{}
+      \vspace{-4mm}
+
+      \resumeSubheading
+      {2017中国机器人大赛 一等奖 -（机器人越野项目：摄像头循迹、PID控制）}{2017.08}
+      {}{}
+      \vspace{-4mm}
+      % \resumeSubheading
+      %   {National Junior Honor Society}{June 2023 -- Present}
+      %   {}{}
+      %   \resumeItemListStart
+      %   \vspace{-4mm}
+      %     \resumeItem{Award presented to students with outstanding achievements in academics, leadership, and community service.}
+      %   \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 %-----------Courses-----------
-\section{Classes}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \vspace{1mm}
-     \textbf{Courses}{: AP Calulus BC, AP Chemistry, AP Physics, AP World History, AP U.S. History, AP Statistics, AP Literature} \\
+% \section{Classes}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%     \vspace{1mm}
+%      \textbf{Courses}{: AP Calulus BC, AP Chemistry, AP Physics, AP World History, AP U.S. History, AP Statistics, AP Literature} \\
 
-    }}
- \end{itemize}
+%     }}
+%  \end{itemize}
 
 %-----------Skill and Interests-----------
-\section{Skills \& Interests}
+\section{能力}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \vspace{1mm}
-     \textbf{Skills}{: Probability Theory, Web Design, Microsoft Excel, Microsoft Office} \\
+     \textbf{编程相关}{: Python、C/C++、Matlab/Simulink、Linux、 ROS、Docker、git} \\
      \vspace{1mm}
-     \textbf{Interests}{: Photography, Creative Writing, Archery, New York Knicks} \\
+     \textbf{专业相关}{: 线性控制系统搭建和分析、PID、MPC等控制方法、强化学习和控制、无人机/车辆/水下机器人动力学及控制} \\
      \vspace{1mm}
+     \textbf{语言相关}{：英语雅思6.5（口语7.0），曾深度参与外国工程团队，具有较强沟通能力}
 
     }}
  \end{itemize}
- \begin{center}
-    
-\small 123-456-7890 $|$
-\href{mailto:ADD EMAIL HERE@x.com}{\underline{andrew@gmail.com}} $|$
-\href{ADD LINKEDIN PAGE HERE}{\underline{linkedin.com/in/andrew}} 
-\end{center}
+
+%-----------Contact-----------
+%  \begin{center}
+% \small 123-456-7890 $|$
+% \href{mailto:ADD EMAIL HERE@x.com}{\underline{andrew@gmail.com}} $|$
+% \href{ADD LINKEDIN PAGE HERE}{\underline{linkedin.com/in/andrew}} 
+% \end{center}
 
 \end{document}
