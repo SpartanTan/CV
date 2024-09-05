@@ -19,6 +19,8 @@
 \usepackage{xeCJK} % Support for Chinese characters
 \setmainfont{Arial}  % 将主字体设置为 Arial
 \setCJKmainfont[BoldFont=Microsoft YaHei]{SimSun} % Set the main font to SimSun, or any other preferred font
+\usepackage{fontawesome}  % 加载 FontAwesome 图标库
+\usepackage{multirow}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -63,7 +65,8 @@
 % 新命令，用于需要额外行的条目
 \newcommand{\resumeSubheadingExtended}[5]{  
   \item\small{
-    \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}lr}
+    \begin{tabular*}{0.97\textwidth}{@{}p{0.8\textwidth}p{0.52\textwidth}@{}}
+    % \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}lr}
       \textbf{#1} & \textbf{#2} \\  % 第一行：学校名称 & 地点
       \textit{#3} & \textit{#4} \\  % 第二行：专业名称 & 时间
       #5 &  % 第三行：GPA，仅左侧
@@ -81,78 +84,97 @@
 
 \begin{document}
 
-\begin{center}
-    \textbf{\Huge \scshape Zhicun Tan (至存 谈)} \\ % Chinese Name
-    \vspace{5pt}
-    \textbf{Phone:} +(86) 13402536577 \ \textbf{e-mail: }\href{mailto:tanzc9866@126.com}{tanzc9866@126.com} \ \href{https://github.com/SpartanTan}{Github}\\ % 邮件
-\end{center}
+% \begin{center}
+%     \textbf{\Huge \scshape 谈至存} \\ % Chinese Name
+%     \vspace{5pt}
+%     \textbf{生日:} 1998.06.06 \ \textbf{居住地:} 江苏苏州  \ \textbf{电话:} +(86) 13402536577 \\
+%     \vspace{5pt}
+%     \textbf{邮箱: }\href{mailto:tanzc9866@126.com}{tanzc9866@126.com} \ \href{https://github.com/SpartanTan}{\faGithub Github}\\ % 邮件
+% \end{center}
 
+\vspace*{-10mm}
+\noindent
+\begin{tabular}{@{}l@{}r@{\hspace{3cm}}l@{}}
+    \multirow{3}[6]{*}{\textbf{\Huge Zhicun Tan(至存 \ 谈)}} & & \begin{tabular}[t]{@{}l@{}}
+        \textbf{Birthday:} 06.06.1998 \\
+        \textbf{Location:} \textbf{Suzhou, Jiangsu} \\
+        \textbf{Phone:} +(86) 13402536577 \\
+        \textbf{e-mail:} \href{mailto:tanzc9866@126.com}{tanzc9866@126.com} \\
+        \href{https://github.com/SpartanTan}{\faGithub Github}
+    \end{tabular} \\
+\end{tabular}
 
 %--- Insert sections of resume here ---
+\vspace{-5mm}
+\section{Personal Statement} 
+I studied Autonomous Systems at DTU and Chalmers, specializing in software development for race car dynamics and robot navigation. I possess strong analytical, practical, teamwork, and communication skills.
+
+\vspace{-3mm}
 %-----------EDUCATION-----------
-\section{教育经历}
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
-      {Technical University of Denmark 丹麦科技大学 - 硕士}{哥本哈根，丹麦}
-      {Autonomous Systems 自治系统}{2021.01 -- 2023.12}  
-      {GPA 8.86/12}
+      {Technical University of Denmark(DTU)}{Copenhagen, Denmark}
+      {Master of Science in Engineering (MScEng), \textbf{Autonomous Systems}}{01.2021 -- 12.2023}  
+      {GPA: 8.86/12 Core courses: Linear control design, Perception for AS, Advanced autonomous robots}
   \resumeSubHeadingListEnd
 
-  \vspace{-1mm} % 调整这里的值以减少空间
+  \vspace{0.5mm} % 调整这里的值以减少空间
 
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Chalmers University of Technology 查尔姆斯理工大学（交换）- 硕士}{哥德堡，瑞典}
-      {System, Control and Mechatronics 系统控制，机电一体化}{2022.09 -- 2023.12}
+    \resumeSubheadingExtended
+      {Chalmers University of Technology (exchange)}{Gothenburg, Sweden}
+      {MSc in \textbf{System, Control and Mechatronics}}{09.2022 -- 12.2023}
+      {Core courses: Vehicle Motion Engineering、Decision-making for AS、Artifical Neural Networks}
   \resumeSubHeadingListEnd
   
-  \vspace{-0.5mm} % 调整这里的值以减少空间
+  \vspace{0.5mm} % 调整这里的值以减少空间
 
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
-      {南京工程学院 - 本科}{南京，中国}
-      {机械电子工程}{2016.09 -- 2020.06}
-      {GPA 3.47, 专业排名 10/162}
+      {Nanjing Insitition of Technology}{Nanjing, Jiangsu}
+      {BSc in \textbf{Mechatronics}}{09.2016 -- 06.2020}
+      {GPA: 3.47, Rank in major: 10/162}
   \resumeSubHeadingListEnd
 
 %-----------Extracurriculars-----------
-\section{项目}
+\section{Projects}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {\textbf{强化学习机器人导航控制}}{丹麦科技大学}
-      {独立开发者}{2023.07 -- 2023.12}
+      {\textbf{Reinforcement learning for robust
+      mobile robot navigation control \; \href{https://1drv.ms/v/s!Al-YZOpjHxorgslaTIu4oeTj8TYROw?e=EflSJj}{\faVideoCamera} \;  \href{https://github.com/SpartanTan/RLATR}{\faGithub}}}{DTU}
+      {Independent Developer}{07.2023 -- 12.2023}
       \resumeItemListStart
-        \resumeItem{基于Gymnasium环境开发了一个搭载激光雷达两轮驱动小车的训练环境}
-        \resumeItem{由于环境限制，从零实现了激光雷达模块，尝试采用多种方式如numba和向量化加速计算}
-        \resumeItem{为避免过拟合，实现了可随机生成的训练环境，包含可调长度的规划路径、可动障碍物、及走廊墙壁}
-        \resumeItem{开发了一个用于调试训练参数、环境参数和图形化显示仿真环境的GUI工具，便于显示数据和验证算法}
-        \resumeItem{实现了基于PPO的导航控制算法，使得小车能够在未知环境中避障并到达目标，综合成功率在60\%左右}
-    \resumeItemListEnd
+        \resumeItem{Developed a Laser-scanner-equipped, two-wheeled robot training environment in Gymnasium.} 
+        \resumeItem{Built the LiDAR module from scratch using techniques like Numba and vectorization for computational speed.} 
+        \resumeItem{Designed adjustable paths, movable obstacles, and corridor walls in the environment to prevent overfitting.} 
+        \resumeItem{Created a GUI tool for easy tweaking of training and environment parameters and for visualizing simulations.} \resumeItem{Trained the NN ccontroller with PPO, achieving a 60\% success rate in unknown environments with obstacles.}
+      \resumeItemListEnd
       
     \resumeSubheading
-      {\textbf{Unmanned autonomous systems 无人自主系统}}{丹麦科技大学}
-      {项目开发者}{2022.06 -- 2022.06}
+      {\textbf{Unmanned autonomous systems \; \href{https://1drv.ms/v/s!Al-YZOpjHxorgslZm5SJR7mVF_eoPw?e=4kRkvd}{\faVideoCamera} \;  \href{https://github.com/SpartanTan/31390-UAS-2022}{\faGithub}}}{DTU}
+      {Project Developer}{06.2022 -- 06.2022}
       \resumeItemListStart
-        \resumeItem{实现基于Matlab/Simulink的无人机控制系统，使得小型四轴无人机实现悬停、平移、定点飞行等功能}
-        \resumeItem{实现了3D环境下应用A*进行路径规划，成功控制无人机穿越3D迷宫}
-        \resumeItem{应用多项式优化工具实现轨迹规划，成功控制无人机自主起飞、穿越四个随机设置的圆环并降落}
+      \resumeItem{Developed a control system in Simulink enabling hovering, translation, and set-point flight for a quadcopter.} 
+      \resumeItem{Implemented path planning using A* in a 3D environment, successfully navigating a drone through a 3D maze.} 
+      \resumeItem{Utilized polynomial optimization for trajectory planning, making the quadcopter navigate through hoops}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
 %-----------Experience-----------
-\section{经历}
+\section{Internship \& Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {\href{https://www.chalmersformulastudent.se/cfs-2023-car-margareta}{Chalmers Formula Student/Chalmers方程式赛车队 🔗}}{查尔姆斯理工大学}
-      {自动驾驶团队软件工程师}{2022.09 -- 2023.08}
-      \resumeItemListStart
-        \resumeItem{根据单位经纬度在地面投影的长度，实现从GPS获取的地理坐标（经纬度）转换为地图坐标的方法。该方法被用以验证SLAM地图的准确性。}
-        \resumeItem{开发Gazebo插件，实现以扭矩为输入、考虑重量转移的四轮车辆动力学仿真，便于测试SLAM和控制算法}
-        \resumeItem{参与开发基于PyQt的GUI工具，便于启动Gazebo、Rviz以及自动驾驶系统，可根据实际车辆调整模型参数}
-        \resumeItem{帮助团队在2023 Formula Student德国站无人杯获得冠军，东欧站无人杯获得第七名}
-    \resumeItemListEnd
+    {\href{https://www.chalmersformulastudent.se/cfs-2023-car-margareta}{Chalmers Formula Student \faExternalLink}}{Chalmers}
+      {Autonomous system software engineer}{2022.09 -- 2023.08}
+      \resumeItemListStart 
+        \resumeItem{Developed a method for converting GPS coordinates to map coordinates, used to verify SLAM map accuracy.} 
+        \resumeItem{Developed a Gazebo plugin for a four-wheel vehicle motion simulation to test SLAM and control algorithms.} 
+        \resumeItem{Contributed to developing a tool for launching autonomous systems with test options.} 
+        \resumeItem{Assisted the team winning the 2023 FSG Autonomous Cup and securing 7th place at FS East.} 
+      \resumeItemListEnd
   %   \resumeSubheading
     %   {凉善公益}{龙门乡塔哈村小学, 凉山彝族自治州}
     %   {\small 小学支教老师}{2024.02 -- 2024.06}
@@ -161,44 +183,44 @@
     %     \resumeItem{期末成绩全县排名17，同类学校排名第5}
   %   \resumeItemListEnd
 
-    \resumeSubheading
-      {苏州盖茨电子科技有限公司}{苏州，江苏}
-      {电子研发实习生}{2020.09 -- 2020.10}
-      \resumeItemListStart
-        \resumeItem{参与调试基于S32K144的车载空压机FOC算法}
-      \resumeItemListEnd
+    % \resumeSubheading
+    %   {苏州盖茨电子科技有限公司}{苏州，江苏}
+    %   {电子研发实习生}{2020.09 -- 2020.10}
+    %   \resumeItemListStart
+    %     \resumeItem{参与调试基于S32K144的车载空压机FOC算法}
+    %   \resumeItemListEnd
       
     \resumeSubheading
-      {越野机器人实验室}{南京工程学院，南京}
-      {单片机开发、负责人}{2017.07 -- 2018.07}
+      {Off-robot robot lab}{NJIT, Nanjing}
+      {MCU developer \& head of the lab}{07.2017 -- 07.2018}
       \resumeItemListStart
-        \resumeItem{开发基于STM32的四轮循迹小车程序，实现摄像头/激光测距循迹，机械臂控制}
-        \resumeItem{带领团队蝉联2017年省大学生机器人大赛和2018年中国工程机器人大赛冠军}
-        \resumeItem{申请2项实用新型专利，完成1项挑战杯（管道机器人）结题}
-        \resumeItemListEnd
+        \resumeItem{Developed lane-following car on STM32, featuring camera/laser rangefinder tracking and robotic arm control.} 
+        \resumeItem{Led the team to consecutive wins at provincial \& national level robot competitions}
+        \resumeItem{Got two utility patents granted, and completed a Challenge Cup project in the topic of pipeline robots.}
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
-\section{奖项}
+\section{\href{https://1drv.ms/f/s!Al-YZOpjHxorgslbx6yg1s1e4ZGl1A?e=1DVmBG}{Awards \faExternalLink}}
     \resumeSubHeadingListStart
       \resumeSubheading
-      {2019钛马大赛 冠军 -（室内环境下搭载单线激光雷达阿克曼转向小车避障越野）}{2019.06}
+      {\textbf{First Award} in Intellect Vehicle Challenge}{06.2019}
       {}{}
       \vspace{-4mm}
 
       \resumeSubheading
-      {2018中国工程机器人大赛 冠军 -（工程越野项目竞技赛：摄像头循迹、PID控制、色彩识别、机械臂抓取）}{2018.04}
+      {Champion in 2018 China Engineering Robot Competition}{04.2018}
       {}{}
       \vspace{-4mm}
 
-      \resumeSubheading
-      {第八届江苏省机器人大赛 冠军 -（机器人越野项目：摄像头循迹、PID控制）}{2017.11}
-      {}{}
-      \vspace{-4mm}
+      % \resumeSubheading
+      % {第八届江苏省机器人大赛 冠军 -（机器人越野项目：摄像头循迹、PID控制）}{2017.11}
+      % {}{}
+      % \vspace{-4mm}
 
       \resumeSubheading
-      {2017中国机器人大赛 一等奖 -（机器人越野项目：摄像头循迹、PID控制）}{2017.08}
+      {First Award in 2018 China Robot Competition}{08.2017}
       {}{}
       \vspace{-4mm}
       % \resumeSubheading
@@ -221,15 +243,15 @@
 %  \end{itemize}
 
 %-----------Skill and Interests-----------
-\section{能力}
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \vspace{1mm}
-     \textbf{编程相关}{: Python、C/C++、Matlab/Simulink、Linux、 ROS、Docker、git} \\
+     \textbf{Coding}{: Python、C/C++、Matlab/Simulink、Linux、 ROS、Docker、git} \\
      \vspace{1mm}
-     \textbf{专业相关}{: 线性控制系统搭建和分析、PID、MPC等控制方法、强化学习和控制、无人机/车辆/水下机器人动力学及控制} \\
+     \textbf{Control Systems Expertise}{: Linear control systems, control methods including PID and MPC, Reinforcement learning and neural networks, dynamics and control of drones, vehicles, and ROV} \\
      \vspace{1mm}
-     \textbf{语言相关}{：英语雅思6.5（口语7.0），曾深度参与外国工程团队，具有较强沟通能力}
+     \textbf{Language}{: IELTS 6.5 (Oral 7.0). Worked in international engineering team, demonstrating strong communication skills}
 
     }}
  \end{itemize}
