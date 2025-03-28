@@ -140,11 +140,33 @@ I hold a Master's degree in Autonomous Systems from Technical University of Denm
 %-----------Experience-----------
 \section{Internship \& Work Experience}
 \resumeSubHeadingListStart
+  % \resumeSubheading
+  % {Hyperview - Apetech Autonomous Racing Car}{ZZIC}
+  % {Intern, Innovation and R\&D Department（\textbf{关键词：}Matlab，车辆横向控制，车辆动力学仿真，速度规划器）}{2024.10}
+  % \resumeItemListStart
+  %   % \resumeItem{参与开发基于惯导RTK定位的无人驾驶汽车横向控制实车调试及仿真}
+  %   \resumeItem{负责建立车辆动力学模型，设计并联PID控制航向误差和横向轨迹误差，在仿真中验证可行性。最终 \\ 取得横向误差RMS小于2}
+  %   \resumeItem{负责实现速度规划器。使用Menger方法计算赛道曲率，并根据最大横向加速度计算路段最大速度}
+  %   \resumeItem{实现前向/后向调整的方法，确保速度规划符合车辆最大加/减速度限制，避免进弯前急减速和出弯后的急加速}
+  %   \resumeItem{参与实车控制系统参数调试，所调车辆在株洲赛车场取得2分40秒的成绩}
+  % \resumeItemListEnd
+
+  \resumeSubheading
+  {Hyperview - Apetech Autonomous Racing Car Project}{ZZIC}
+  {Intern, Innovation and R\&D Department (\textbf{keywords:} Matlab, Vehicle Control, Speed Planner)}{10.2024}
+  \resumeItemListStart
+    \resumeItem{Responsible for developing the simulation with heading and lateral controller.}
+    \resumeItem{Developed a speed planner using track curvature calculated by Menger method.}
+    \resumeItem{Implemented forward/backward adjustments to ensure the planned speed is consistent with the vehicle's acceleration and deceleration limits.}
+    \resumeItem{Participated in tuning the vehicle control system, achieving a lap time of 2'40''.}
+  \resumeItemListEnd
+
   \resumeSubheading
   {\href{https://www.chalmersformulastudent.se/cfs-2023-car-margareta}{Chalmers Formula Student \faExternalLink}}{Chalmers}
     {Autonomous system engineer (\textbf{keywords:} C++, Gazebo, ROS, Vehicle dynamics modelling)}{09.2022 -- 08.2023}
     \resumeItemListStart 
       %\resumeItem{Developed a method for converting GPS coordinates to map coordinates, used to verify SLAM map accuracy.} 
+      \resumeItem{Developed car state estimator using a LuGre tire model, implementing a 15-state Kalman filter.}
       \resumeItem{Developed a C++ plugin for \textbf{4wd vehicle dynamics simulation} using \textbf{RK4}.}
       \resumeItem{Solved conflict issues when migrated legacy simulator to latest Gazebo.}
       \resumeItem{Contributed to developing the launching system for launching autonomous systems with test options.} 
@@ -185,8 +207,9 @@ I hold a Master's degree in Autonomous Systems from Technical University of Denm
       mobile robot navigation control \; \href{https://1drv.ms/v/s!Al-YZOpjHxorgslaTIu4oeTj8TYROw?e=EflSJj}{\faVideoCamera} \;  \href{https://github.com/SpartanTan/RLATR}{\faGithub}}}{DTU}
       {Independent Developer (\textbf{keywords: }Kinematic modelling, Python, Reinforcement learning, PyQt)}{07.2023 -- 12.2023}
       \resumeItemListStart
-      \resumeItem{Developed a kinematic model for a two-wheel drive robot using RK4 in Gymnasium.} 
-        \resumeItem{Developed the laser scanner simulator; Implemented the algorithm for generating random corridor.} 
+        \resumeItem{Developed the kinematic model for a two-wheel drive robot and a  laser scanner module in Gymnasium.} 
+        \resumeItem{Developed an algorithm to generate randomized paths, obstacles, and corridor walls for the training environment.}
+        \resumeItem{Implemented reward functions for path tracking and obstacle avoidance. Testing and parameters tuning.}
         \resumeItem{Created a GUI tool for easy tweaking of training and environment parameters and for visualizing simulations.} \resumeItem{Trained the NN controller with PPO, achieving a 60\% success rate in unknown environments with obstacles.}
       \resumeItemListEnd
       
@@ -204,6 +227,12 @@ I hold a Master's degree in Autonomous Systems from Technical University of Denm
 
 \section{\href{https://1drv.ms/f/s!Al-YZOpjHxorgslbx6yg1s1e4ZGl1A?e=1DVmBG}{Awards \faExternalLink}}
     \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {2023 Formula Student Germany Driverless Cup overall winner}{2023.08}
+      {}{}
+      \vspace{-4mm}
+
       \resumeSubheading
       {\textbf{First Award} in Intellect Vehicle Challenge}{06.2019}
       {}{}

@@ -139,6 +139,22 @@
   \resumeSubHeadingListEnd
 
 %-----------Experience-----------
+\section{工作经历}
+\resumeSubHeadingListStart
+\resumeSubheading
+{畅加风行（苏州）智能科技有限公司}{苏州，江苏}
+{规划控制工程师}{2024.12 -- 至今}
+\resumeItemListStart
+  \resumeItem{以C++重写开源算法Simpl的数据预处理部分，提高了数据处理速度}
+  \resumeItem{开发回溯碰撞检测功能，集成进PNC模块中，比较GJK和SAT算法}
+  \resumeItem{掌握横纵向标定，相机雷达内外参标定，输出多份文档}
+  \resumeItem{打通从手持建图设备到道路拓扑地图转换流程}
+  \resumeItem{重构控制部分代码，整理、封装}
+  \resumeItemListEnd 
+
+\resumeSubHeadingListEnd
+
+%-----------Experience-----------
 \section{实习经历}
 \resumeSubHeadingListStart
     \resumeSubheading
@@ -146,7 +162,7 @@
     {\small 创新研发部实习生（\textbf{关键词：}Matlab，车辆横向控制，车辆动力学仿真，速度规划器）}{2024.10}
     \resumeItemListStart
       % \resumeItem{参与开发基于惯导RTK定位的无人驾驶汽车横向控制实车调试及仿真}
-      \resumeItem{负责建立车辆动力学模型，设计并联PID控制航向误差和横向轨迹误差，在仿真中验证可行性。最终取得横向误差RMS小于2}
+      \resumeItem{负责建立车辆动力学模型，设计并联PID控制航向误差和横向轨迹误差，在仿真中验证可行性。最终 \\ 取得横向误差RMS小于2}
       \resumeItem{负责实现速度规划器。使用Menger方法计算赛道曲率，并根据最大横向加速度计算路段最大速度}
       \resumeItem{实现前向/后向调整的方法，确保速度规划符合车辆最大加/减速度限制，避免进弯前急减速和出弯后的急加速}
       \resumeItem{参与实车控制系统参数调试，所调车辆在株洲赛车场取得2分40秒的成绩}
@@ -157,10 +173,10 @@
     {自动驾驶团队软件工程师 （\textbf{关键词：}C++，Gazebo，ROS，卡尔曼滤波器，车辆动力学）}{2022.09 -- 2023.08}
     \resumeItemListStart
       % \resumeItem{参与开发和维护包含感知、规划、控制、通信等系统的大型自动驾驶项目}
-      \resumeItem{负责赛车状态估计器的开发。基于LuGre轮胎模型，设计并实现含有15个状态的卡尔曼滤波器。通过 \\ 轮速计和IMU精确估计车速与角速度，为感知和控制提供}
       \resumeItem{负责移植eufs\_sim到ROS2和新版Gazebo中，解决API冲突问题}
-      \resumeItem{负责开发基于动力学的四轮驱动车辆运动仿真插件，使用RK4精确计算速度和位置}
+      \resumeItem{负责开发基于动力学的四轮驱动车辆运动仿真插件，增加横/纵向重量转移计算以及使用 \\ RK4提高仿真精确度}
       \resumeItem{参与开发了基于PyQt的自动驾驶系统测试软件，开发一键启动，参数选择等功能，打包含有整套 \\ 仿真软件的docker环境}
+      \resumeItem{参与赛车状态估计器的开发。基于LuGre轮胎模型，实现含有15个状态的卡尔曼滤波器。通过 \\ 轮速计和IMU精确估计车速与角速度，为感知和控制提供准确估计信息}
       \resumeItem{帮助团队在2023 Formula Student德国站无人杯获得\textbf{冠军}，东欧站无人杯获得第七名}
   \resumeItemListEnd
 %   \resumeSubheading
@@ -178,14 +194,14 @@
   %     \resumeItem{参与调试基于S32K144的车载空压机FOC算法}
   %   \resumeItemListEnd
 
-  \resumeSubheading
-    {邦纳电子（苏州）有限公司}{苏州，江苏}
-    {电子研发实习生}{2019.07 -- 2019.08}
-    \resumeItemListStart
-      \resumeItem{使用Oracle系统建立电子零件库}
-      \resumeItem{参与了塔灯和光电传感器项目，通过更换元件对比亮度和功耗等性能参数}
-      \resumeItem{使用示波器、分贝计等工具测量并分析器件增益、迟滞性和波束}
-    \resumeItemListEnd
+  % \resumeSubheading
+  %   {邦纳电子（苏州）有限公司}{苏州，江苏}
+  %   {电子研发实习生}{2019.07 -- 2019.08}
+  %   \resumeItemListStart
+  %     \resumeItem{使用Oracle系统建立电子零件库}
+  %     \resumeItem{参与了塔灯和光电传感器项目，通过更换元件对比亮度和功耗等性能参数}
+  %     \resumeItem{使用示波器、分贝计等工具测量并分析器件增益、迟滞性和波束}
+  %   \resumeItemListEnd
     
   \resumeSubheading
     {越野机器人实验室}{南京工程学院，南京}
