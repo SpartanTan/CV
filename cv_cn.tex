@@ -107,7 +107,7 @@
 %--- Insert sections of resume here ---
 \vspace{-5mm}
 \section{个人自述}
-我获得丹麦科技大学自动化系统的硕士学位，曾参与开发无人赛车状态估计器、控制器和动力学仿真；无人机规划控制以及深度强化学习控制器的项目。在赛车队和实验室的经历使我在工作中能积极地参与沟通，分析问题，快速实践。
+我获得丹麦科技大学自主系统的硕士学位，曾参与开发无人赛车状态估计器、控制器和动力学仿真；无人机规划控制以及深度强化学习控制器的项目。在赛车队和实验室的经历使我在工作中能积极地参与沟通，分析问题，快速实践。
 
 % \vspace{-3mm}
 \vspace{-3mm}
@@ -116,7 +116,7 @@
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
       {丹麦科技大学（Technical University of Denmark）}{哥本哈根，丹麦}
-      {硕士学位，\textbf{自动化系统（Autonomous Systems）}}{2021.01 -- 2023.12}  
+      {硕士学位，\textbf{自主系统（Autonomous Systems）}}{2021.01 -- 2023.12}  
       {GPA: 8.86/12； 课程：线性系统设计、自治系统的感知、基于模型的系统工程，强化学习与控制概论}
   \resumeSubHeadingListEnd
 
@@ -145,10 +145,11 @@
 {畅加风行（苏州）智能科技有限公司}{苏州，江苏}
 {规划控制工程师}{2024.12 -- 至今}
 \resumeItemListStart
-  \resumeItem{以C++重写开源算法Simpl的数据预处理部分，提高了数据处理速度}
-  \resumeItem{开发回溯碰撞检测功能，集成进PNC模块中，比较GJK和SAT算法}
-  \resumeItem{掌握横纵向标定，相机雷达内外参标定，输出多份文档}
-  \resumeItem{打通从手持建图设备到道路拓扑地图转换流程}
+  \resumeItem{以C++重写开源预测算法Simpl的数据预处理部分，耗时降低至10ms以内}
+  \resumeItem{参考apollo代码开发回溯碰撞检测功能，将开源GJK算法集成进PNC模块中，综合快20\%}
+  \resumeItem{掌握车辆横纵向标定，相机及雷达内外参标定方法，输出多份文档}
+  % \resumeItem{打通从手持建图设备到道路拓扑地图转换流程}
+  \resumeItem{参与规控模块实车部署和调试，包括乘用车、无人快递车和越野车等}
   \resumeItem{重构控制部分代码，整理、封装}
   \resumeItemListEnd 
 
@@ -159,18 +160,18 @@
 \resumeSubHeadingListStart
     \resumeSubheading
     {宏景智驾-无人赛车“天猿”自动驾驶系统项目}{株洲国际赛车场}
-    {\small 创新研发部实习生（\textbf{关键词：}Matlab，车辆横向控制，车辆动力学仿真，速度规划器）}{2024.10}
+    {\small 创新研发部实习生（Matlab，车辆横向控制，车辆动力学仿真，速度规划器）}{2024.10}
     \resumeItemListStart
       % \resumeItem{参与开发基于惯导RTK定位的无人驾驶汽车横向控制实车调试及仿真}
-      \resumeItem{负责建立车辆动力学模型，设计并联PID控制航向误差和横向轨迹误差，在仿真中验证可行性。最终 \\ 取得横向误差RMS小于2}
-      \resumeItem{负责实现速度规划器。使用Menger方法计算赛道曲率，并根据最大横向加速度计算路段最大速度}
+      % \resumeItem{负责建立车辆动力学模型，设计并联PID控制航向误差和横向轨迹误差，在仿真中验证可行性。最终 \\ 取得横向误差RMS小于2}
+      \resumeItem{实现速度规划器。使用Menger方法计算赛道曲率，并根据最大横向加速度计算路段最大速度}
       \resumeItem{实现前向/后向调整的方法，确保速度规划符合车辆最大加/减速度限制，避免进弯前急减速和出弯后的急加速}
       \resumeItem{参与实车控制系统参数调试，所调车辆在株洲赛车场取得2分40秒的成绩}
     \resumeItemListEnd  
   
     \resumeSubheading
   {\href{https://www.chalmersformulastudent.se/cfs-2023-car-margareta}{Chalmers Formula Student/Chalmers方程式赛车队 \faExternalLink}}{查尔姆斯理工大学}
-    {自动驾驶团队软件工程师 （\textbf{关键词：}C++，Gazebo，ROS，卡尔曼滤波器，车辆动力学）}{2022.09 -- 2023.08}
+    {自动驾驶团队软件工程师 （C++，Gazebo，ROS，卡尔曼滤波器，车辆动力学）}{2022.09 -- 2023.08}
     \resumeItemListStart
       % \resumeItem{参与开发和维护包含感知、规划、控制、通信等系统的大型自动驾驶项目}
       \resumeItem{负责移植eufs\_sim到ROS2和新版Gazebo中，解决API冲突问题}
@@ -205,7 +206,7 @@
     
   \resumeSubheading
     {越野机器人实验室}{南京工程学院，南京}
-    {单片机开发、负责人（\textbf{关键词：}嵌入式软件，C，PID，团队管理）}{2017.07 -- 2018.07}
+    {单片机开发、负责人（嵌入式软件，C，PID，团队管理）}{2017.07 -- 2018.07}
     \resumeItemListStart
       \resumeItem{开发基于STM32的四轮循迹小车程序，实现摄像头/激光测距循迹，机械臂控制}
       \resumeItem{带领团队蝉联2017年省大学生机器人大赛和2018年中国工程机器人大赛冠军}
@@ -220,7 +221,7 @@
 
     \resumeSubheading
       {\textbf{强化学习机器人导航控制 \; \href{https://1drv.ms/v/s!Al-YZOpjHxorgslaTIu4oeTj8TYROw?e=EflSJj}{\faVideoCamera} \;  \href{https://github.com/SpartanTan/RLATR}{\faGithub}}}{丹麦科技大学}
-      {独立开发者（\textbf{关键词：}机器人运动学仿真，Python，强化学习，PyQt GUI设计）}{2023.07 -- 2023.12}
+      {独立开发者（机器人运动学仿真，Python，强化学习，PyQt GUI设计）}{2023.07 -- 2023.12}
       \resumeItemListStart
         \resumeItem{基于Gymnasium环境开发了一个两轮驱动小车的运动学模型和激光雷达仿真模块}
         \resumeItem{将工厂地图转换为Polygon，实现符合实机测试需要的拟真环境}
@@ -233,7 +234,7 @@
       
     \resumeSubheading
       {\textbf{Unmanned autonomous systems 无人自主系统  \; \href{https://1drv.ms/v/s!Al-YZOpjHxorgslZm5SJR7mVF_eoPw?e=4kRkvd}{\faVideoCamera} \;  \href{https://github.com/SpartanTan/31390-UAS-2022}{\faGithub}}}{丹麦科技大学}
-      {项目开发者（\textbf{关键词：}Matlab/Simulink，无人机动力学建模仿真，A*路径规划）}{2022.06 -- 2022.06}
+      {项目开发者（Matlab/Simulink，无人机动力学建模仿真，A*路径规划）}{2022.06 -- 2022.06}
       \resumeItemListStart
         \resumeItem{推导动力学模型，在Simulink中构建非线性模型并线性化获得状态空间模型}
         \resumeItem{负责实现基于Matlab/Simulink的PID控制器，控制无人机实现悬停、平移、定点飞行等功能}
