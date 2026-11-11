@@ -1,2 +1,8 @@
-*.gz
+# Generated documents and preview files
 *.pdf
+/output/
+/tmp/
+
+# Editor / OS files
+.DS_Store
+*.swp
