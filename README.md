@@ -6,10 +6,10 @@
 
 - `latex`：迁移前的完整 LaTeX 版本，包括旧模板、历史简历和编译设置。
 - `typst`：当前 Typst 版本。
-- `main`：保留迁移前状态。
+- `main`：默认分支，使用当前 Typst 版本。
 
 ```bash
-git switch typst
+git switch main
 # 查看原版时：git switch latex
 ```
 
